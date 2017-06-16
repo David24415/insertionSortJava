@@ -1,0 +1,35 @@
+//David Dorneau
+//COP3530
+//Dr.Mehrdad Nojoumian
+//Insertion sort implementation
+public class ArraySort {
+
+	public static void main(String[] args) {
+		int temp=0;
+		int[] StrArr={4,3,9,12,13,10,10};
+		int SiZe=StrArr.length;
+		
+		for(int j=1;j<SiZe;j++)							// second element in array would be at index 1.
+		{
+			int i=0;									// arrays start indexing at zero, change init. value from i=1 to i=0.
+			
+			while(StrArr[j]>StrArr[i])
+			{
+				i=i+1;
+			}
+			temp=StrArr[j];
+			
+			for(int k=0;k<=(j-i-1);k++)					
+			{
+				StrArr[j-k]=StrArr[j-k-1];
+				
+			}
+			StrArr[i]=temp;
+		}
+		for(int x=0;x<SiZe;x++)
+		{
+		System.out.println(StrArr[x]);
+		}
+	}
+
+}
